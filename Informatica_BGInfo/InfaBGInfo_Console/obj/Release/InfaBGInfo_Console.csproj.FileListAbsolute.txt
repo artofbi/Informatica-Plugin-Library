@@ -1,0 +1,1 @@
+C:\_Dev\Informatica_BGInfo\InfaBGInfo_Console\bin\Release\InfaBGInfo_Console.exe.config

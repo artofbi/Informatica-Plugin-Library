@@ -1,0 +1,41 @@
+.MAKE_VERSION:	VERSION-1.0
+.BUILT_LAST_MAKE_RUN:
+.build-conf:
+	/opt/sunstudio12.1/bin/dmake  -f nbproject/Makefile-Release.mk /export/home/infa/SunStudioWorkspace/Output_SOs/libRandomString.so
+.clean-conf:
+	rm -f -r build/Release
+	rm -f /export/home/infa/SunStudioWorkspace/Output_SOs/libRandomString.so
+	CCadmin -clean
+.BUILT_LAST_MAKE_RUN:
+.depcheck-impl:
+	echo "# This code depends on make tool being used" >.dep.inc
+	if [ -n "" ]; then \
+	    echo "DEPFILES=\$(wildcard \$(addsuffix .d, \${OBJECTFILES}))" >>.dep.inc; \
+	    echo "ifneq (\${DEPFILES},)" >>.dep.inc; \
+	    echo "include \${DEPFILES}" >>.dep.inc; \
+	    echo "endif" >>.dep.inc; \
+	else \
+	    echo ".KEEP_STATE:" >>.dep.inc; \
+	    echo ".KEEP_STATE_FILE:.make.state.\${CONF}" >>.dep.inc; \
+	fi
+/export/home/infa/SunStudioWorkspace/Output_SOs/libRandomString.so:
+	mkdir -p /export/home/infa/SunStudioWorkspace/Output_SOs
+	CC -mt -m32 -DUNIX -D_REENTRANT -DSunOS   -G -o /export/home/infa/SunStudioWorkspace/Output_SOs/libRandomString.so -KPIC -norunpath -h libRandomString.so build/Release/SunStudio_12.1-Solaris-x86/RandomString.o  
+build/Debug/SunStudio_12.1-Solaris-x86/RandomString.o:	/usr/include/stdlib.h /usr/include/iso/stdlib_iso.h /usr/include/sys/feature_tests.h /usr/include/sys/ccompile.h /usr/include/sys/isa_defs.h /usr/include/iso/stdlib_c99.h /usr/include/stdio.h /usr/include/iso/stdio_iso.h /usr/include/sys/va_list.h /usr/include/stdio_tag.h /usr/include/stdio_impl.h /usr/include/iso/stdio_c99.h /usr/include/string.h /usr/include/iso/string_iso.h /opt/sunstudio12.1/prod/include/CC/std/cstdlib /opt/sunstudio12.1/prod/include/CC/std/ctime
+build/Debug/SunStudio_12.1-Solaris-x86/RandomString.o:	/usr/include/iso/time_iso.h ../../DEV/_include/sdkexpr/exprsdk.h ../../DEV/_include/sdkcmn/typesc.h RandomString.hpp 
+	mkdir -p build/Debug/SunStudio_12.1-Solaris-x86
+	CC    -c -g -I../../DEV/_include -I/usr/include -KPIC  -o build/Debug/SunStudio_12.1-Solaris-x86/RandomString.o RandomString.cpp
+build/Release/SunStudio_12.1-Solaris-x86/RandomString.o:	/usr/include/stdlib.h /usr/include/iso/stdlib_iso.h /usr/include/sys/feature_tests.h /usr/include/sys/ccompile.h /usr/include/sys/isa_defs.h /usr/include/iso/stdlib_c99.h /usr/include/stdio.h /usr/include/iso/stdio_iso.h /usr/include/sys/va_list.h /usr/include/stdio_tag.h /usr/include/stdio_impl.h /usr/include/iso/stdio_c99.h /usr/include/string.h /usr/include/iso/string_iso.h /opt/sunstudio12.1/prod/include/CC/std/cstdlib /opt/sunstudio12.1/prod/include/CC/std/ctime
+build/Release/SunStudio_12.1-Solaris-x86/RandomString.o:	/usr/include/iso/time_iso.h RandomString.hpp ../../SunStudioWorkspace/_Libraries/sdkexpr/exprsdk.h ../../SunStudioWorkspace/_Libraries/sdkcmn/typesc.h 
+	mkdir -p build/Release/SunStudio_12.1-Solaris-x86
+	CC -mt -m32 -DUNIX -D_REENTRANT -DSunOS   -c -fast +w -I/usr/include -I../../SunStudioWorkspace/_Libraries -KPIC  -o build/Release/SunStudio_12.1-Solaris-x86/RandomString.o RandomString.cpp
+build/Release_x64/SunStudio_12.1-Solaris-x86/RandomString.o:	/usr/include/stdlib.h /usr/include/iso/stdlib_iso.h /usr/include/sys/feature_tests.h /usr/include/sys/ccompile.h /usr/include/sys/isa_defs.h /usr/include/iso/stdlib_c99.h /usr/include/stdio.h /usr/include/iso/stdio_iso.h /usr/include/sys/va_list.h /usr/include/stdio_tag.h /usr/include/stdio_impl.h /usr/include/iso/stdio_c99.h /usr/include/string.h /usr/include/iso/string_iso.h /opt/sunstudio12.1/prod/include/CC/std/cstdlib /opt/sunstudio12.1/prod/include/CC/std/ctime
+build/Release_x64/SunStudio_12.1-Solaris-x86/RandomString.o:	/usr/include/iso/time_iso.h ../../DEV/_include/sdkexpr/exprsdk.h ../../DEV/_include/sdkcmn/typesc.h RandomString.hpp 
+	mkdir -p build/Release_x64/SunStudio_12.1-Solaris-x86
+	CC    -c -fast -I../../DEV/_include -I/usr/include -KPIC  -o build/Release_x64/SunStudio_12.1-Solaris-x86/RandomString.o RandomString.cpp
+dist/Debug/SunStudio_12.1-Solaris-x86/libRandomString.so:
+	mkdir -p dist/Debug/SunStudio_12.1-Solaris-x86
+	CC    -G -o dist/Debug/SunStudio_12.1-Solaris-x86/libRandomString.so -KPIC -norunpath -h libRandomString.so build/Debug/SunStudio_12.1-Solaris-x86/RandomString.o  
+dist/Release/SunStudio_12.1-Solaris-x86/libRandomString.so:
+	mkdir -p dist/Release/SunStudio_12.1-Solaris-x86
+	CC    -G -o dist/Release/SunStudio_12.1-Solaris-x86/libRandomString.so -KPIC -norunpath -h libRandomString.so build/Release_x64/SunStudio_12.1-Solaris-x86/RandomString.o  

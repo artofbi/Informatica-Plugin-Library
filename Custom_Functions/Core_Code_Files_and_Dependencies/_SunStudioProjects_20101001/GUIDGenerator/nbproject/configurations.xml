@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="51">
+  <logicalFolder name="root" displayName="root" projectFiles="true">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>GUIDGenerator.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>GUIDGenerator.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="2">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <compilerSet>SunStudio_12.1|SunStudio_12.1</compilerSet>
+        <platform>1</platform>
+      </toolsSet>
+      <compileType>
+        <ccCompilerTool>
+          <includeDirectories>
+            <directoryPath>/usr/include</directoryPath>
+            <directoryPath>/usr/boost_1_43_0</directoryPath>
+            <directoryPath>../../SunStudioWorkspace/_Libraries</directoryPath>
+          </includeDirectories>
+        </ccCompilerTool>
+        <linkerTool>
+          <linkerAddLib>
+            <directoryPath>/usr/boost_1_43_0/libs</directoryPath>
+          </linkerAddLib>
+          <linkerLibItems>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="GUIDGenerator.cpp">
+        <itemTool>1</itemTool>
+      </item>
+      <item path="GUIDGenerator.h">
+        <itemTool>3</itemTool>
+      </item>
+    </conf>
+    <conf name="Release" type="2">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <compilerSet>SunStudio_12.1|SunStudio_12.1</compilerSet>
+        <platform>1</platform>
+      </toolsSet>
+      <compileType>
+        <cCompilerTool>
+          <developmentMode>5</developmentMode>
+        </cCompilerTool>
+        <ccCompilerTool>
+          <developmentMode>5</developmentMode>
+          <architecture>1</architecture>
+          <includeDirectories>
+            <directoryPath>/usr/include</directoryPath>
+            <directoryPath>/usr/boost_1_43_0</directoryPath>
+            <directoryPath>../../SunStudioWorkspace/_Libraries</directoryPath>
+          </includeDirectories>
+          <commandLine>-DUNIX -D_REENTRANT -DSunOS</commandLine>
+          <warningLevel>2</warningLevel>
+          <mtLevel>1</mtLevel>
+        </ccCompilerTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <linkerTool>
+          <output>/export/home/infa/SunStudioWorkspace/Output_SOs/libGUIDGenerator.so</output>
+          <linkerAddLib>
+            <directoryPath>/usr/boost_1_43_0/libs</directoryPath>
+          </linkerAddLib>
+          <linkerLibItems>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="GUIDGenerator.cpp">
+        <itemTool>1</itemTool>
+      </item>
+      <item path="GUIDGenerator.h">
+        <itemTool>3</itemTool>
+      </item>
+    </conf>
+    <conf name="Release_x64" type="2">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <compilerSet>SunStudio_12.1|SunStudio_12.1</compilerSet>
+        <platform>1</platform>
+      </toolsSet>
+      <compileType>
+        <cCompilerTool>
+          <developmentMode>5</developmentMode>
+        </cCompilerTool>
+        <ccCompilerTool>
+          <developmentMode>5</developmentMode>
+          <includeDirectories>
+            <directoryPath>../../DEV/_include</directoryPath>
+            <directoryPath>/usr/include</directoryPath>
+            <directoryPath>/usr/boost_1_43_0</directoryPath>
+          </includeDirectories>
+        </ccCompilerTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <linkerTool>
+          <linkerAddLib>
+            <directoryPath>/usr/boost_1_43_0/libs</directoryPath>
+          </linkerAddLib>
+          <linkerLibItems>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="GUIDGenerator.cpp">
+        <itemTool>1</itemTool>
+      </item>
+      <item path="GUIDGenerator.h">
+        <itemTool>3</itemTool>
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

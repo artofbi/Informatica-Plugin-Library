@@ -1,0 +1,6 @@
+C:\_Dev\Informatica_BGInfo\InfaBGInfo_Console\bin\Debug\InfaBGInfo_Console.exe
+C:\_Dev\Informatica_BGInfo\InfaBGInfo_Console\bin\Debug\InfaBGInfo_Console.pdb
+C:\_Dev\Informatica_BGInfo\InfaBGInfo_Console\obj\Debug\ResolveAssemblyReference.cache
+C:\_Dev\Informatica_BGInfo\InfaBGInfo_Console\obj\Debug\InfaBGInfo_Console.exe
+C:\_Dev\Informatica_BGInfo\InfaBGInfo_Console\obj\Debug\InfaBGInfo_Console.pdb
+C:\_Dev\Informatica_BGInfo\InfaBGInfo_Console\bin\Debug\InfaBGInfo_Console.exe.config

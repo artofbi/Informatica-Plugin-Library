@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<!DOCTYPE POWERMART SYSTEM "plugin.dtd">
+<POWERMART>
+    <REPOSITORY CODEPAGE="us-ascii">
+        <PLUGIN NAME="CheckSumCRC" ID="56744" VENDORNAME="FyghtSoft" VENDORID="2001"
+            DESCRIPTION="CheckSumCRC function for Expresssions by FyghtSoft"
+            VERSION="8.0.0">
+            <FUNCTION_GROUP ID="505044" NAME="FyghtSoft9"
+                COMPONENTVERSION="1.0.0"
+                DESCRIPTION="Premier Informatica Expression Functions Toolbox"
+                NAMESPACE="">
+
+               <FUNCTION ID="505044" NAME="CheckSumCRC" FUNCTION_CATEGORY="Special"/>
+               
+               <LIBRARY NAME="pmCheckSumCRC.dll" OSTYPE="NT" TYPE="VALIDATION"/>
+               <LIBRARY NAME="pmCheckSumCRC.dll" OSTYPE="NT" TYPE="SERVER"/>
+
+	       <LIBRARY NAME="libCheckSumCRC.sl" OSTYPE="HPUX" TYPE="VALIDATION"/>
+               <LIBRARY NAME="libCheckSumCRC.so" OSTYPE="SOLARIS" TYPE="VALIDATION"/>
+               <LIBRARY NAME="libCheckSumCRC.so" OSTYPE="LINUX" TYPE="VALIDATION"/>
+               <LIBRARY NAME="libCheckSumCRC.a" OSTYPE="AIX" TYPE="VALIDATION"/>
+
+               <LIBRARY NAME="libCheckSumCRC.sl" OSTYPE="HPUX" TYPE="SERVER"/>
+               <LIBRARY NAME="libCheckSumCRC.so" OSTYPE="SOLARIS" TYPE="SERVER"/>
+               <LIBRARY NAME="libCheckSumCRC.so" OSTYPE="LINUX" TYPE="SERVER"/>
+               <LIBRARY NAME="libCheckSumCRC.a" OSTYPE="AIX" TYPE="SERVER"/>
+
+            </FUNCTION_GROUP>
+        </PLUGIN>
+
+    </REPOSITORY>
+</POWERMART>

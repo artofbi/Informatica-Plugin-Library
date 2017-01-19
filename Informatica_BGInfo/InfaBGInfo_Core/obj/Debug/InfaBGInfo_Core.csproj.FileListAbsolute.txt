@@ -1,0 +1,6 @@
+C:\_Dev\Informatica_BGInfo\InfaBGInfo_Core\obj\Debug\ResolveAssemblyReference.cache
+C:\_Dev\Informatica_BGInfo\InfaBGInfo_Core\bin\Debug\InfaBGInfo_Core.dll.config
+C:\_Dev\Informatica_BGInfo\InfaBGInfo_Core\bin\Debug\InfaBGInfo_Core.dll
+C:\_Dev\Informatica_BGInfo\InfaBGInfo_Core\bin\Debug\InfaBGInfo_Core.pdb
+C:\_Dev\Informatica_BGInfo\InfaBGInfo_Core\obj\Debug\InfaBGInfo_Core.dll
+C:\_Dev\Informatica_BGInfo\InfaBGInfo_Core\obj\Debug\InfaBGInfo_Core.pdb

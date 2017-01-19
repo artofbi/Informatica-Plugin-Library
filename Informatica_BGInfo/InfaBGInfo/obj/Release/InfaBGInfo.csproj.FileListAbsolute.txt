@@ -1,0 +1,12 @@
+C:\_Dev\Informatica_BGInfo\InfaBGInfo\bin\Release\InfaBGInfo.exe.config
+C:\_Dev\Informatica_BGInfo\InfaBGInfo\bin\Release\InfaBGInfo.exe
+C:\_Dev\Informatica_BGInfo\InfaBGInfo\bin\Release\InfaBGInfo.XmlSerializers.dll
+C:\_Dev\Informatica_BGInfo\InfaBGInfo\bin\Release\InfaBGInfo.pdb
+C:\_Dev\Informatica_BGInfo\InfaBGInfo\obj\Release\ResolveAssemblyReference.cache
+C:\_Dev\Informatica_BGInfo\InfaBGInfo\obj\Release\InfaBGInfo.Form1.resources
+C:\_Dev\Informatica_BGInfo\InfaBGInfo\obj\Release\InfaBGInfo.Properties.Resources.resources
+C:\_Dev\Informatica_BGInfo\InfaBGInfo\obj\Release\InfaBGInfo.Resources.AboutBox1.resources
+C:\_Dev\Informatica_BGInfo\InfaBGInfo\obj\Release\InfaBGInfo.csproj.GenerateResource.Cache
+C:\_Dev\Informatica_BGInfo\InfaBGInfo\obj\Release\InfaBGInfo.exe
+C:\_Dev\Informatica_BGInfo\InfaBGInfo\obj\Release\InfaBGInfo.pdb
+C:\_Dev\Informatica_BGInfo\InfaBGInfo\obj\Release\InfaBGInfo.XmlSerializers.dll

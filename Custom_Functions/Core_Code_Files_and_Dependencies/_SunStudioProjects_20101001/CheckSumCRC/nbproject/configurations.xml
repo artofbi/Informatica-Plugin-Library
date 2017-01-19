@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="51">
+  <logicalFolder name="root" displayName="root" projectFiles="true">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>CheckSumCRC.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>CheckSumCRC.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="2">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <compilerSet>SunStudio_12.1|SunStudio_12.1</compilerSet>
+        <platform>1</platform>
+      </toolsSet>
+      <compileType>
+        <ccCompilerTool>
+          <includeDirectories>
+            <directoryPath>../../DEV/_include</directoryPath>
+            <directoryPath>/usr/include</directoryPath>
+          </includeDirectories>
+        </ccCompilerTool>
+        <linkerTool>
+          <linkerLibItems>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="CheckSumCRC.cpp">
+        <itemTool>1</itemTool>
+      </item>
+      <item path="CheckSumCRC.h">
+        <itemTool>3</itemTool>
+      </item>
+    </conf>
+    <conf name="Release" type="2">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <compilerSet>SunStudio_12.1|SunStudio_12.1</compilerSet>
+        <platform>1</platform>
+      </toolsSet>
+      <compileType>
+        <cCompilerTool>
+          <developmentMode>5</developmentMode>
+          <architecture>1</architecture>
+          <commandLine>-fPIC</commandLine>
+          <warningLevel>2</warningLevel>
+        </cCompilerTool>
+        <ccCompilerTool>
+          <developmentMode>5</developmentMode>
+          <architecture>1</architecture>
+          <includeDirectories>
+            <directoryPath>/usr/include</directoryPath>
+            <directoryPath>../../SunStudioWorkspace/_Libraries</directoryPath>
+            <directoryPath>../../SunStudioWorkspace/_Libraries/Encryption/hashlibpp_0_3_2/src</directoryPath>
+          </includeDirectories>
+          <commandLine>-DUNIX -D_REENTRANT -DSunOS</commandLine>
+          <warningLevel>2</warningLevel>
+          <mtLevel>1</mtLevel>
+        </ccCompilerTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <linkerTool>
+          <output>/export/home/infa/SunStudioWorkspace/Output_SOs/libCheckSumCRC.so</output>
+          <commandlineTool>CC</commandlineTool>
+          <linkerLibItems>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="CheckSumCRC.cpp">
+        <itemTool>1</itemTool>
+      </item>
+      <item path="CheckSumCRC.h">
+        <itemTool>3</itemTool>
+      </item>
+    </conf>
+    <conf name="Release_x64" type="2">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <compilerSet>SunStudio_12.1|SunStudio_12.1</compilerSet>
+        <platform>1</platform>
+      </toolsSet>
+      <compileType>
+        <cCompilerTool>
+          <developmentMode>5</developmentMode>
+        </cCompilerTool>
+        <ccCompilerTool>
+          <developmentMode>5</developmentMode>
+          <includeDirectories>
+            <directoryPath>../../DEV/_include</directoryPath>
+            <directoryPath>/usr/include</directoryPath>
+          </includeDirectories>
+        </ccCompilerTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <linkerTool>
+          <linkerLibItems>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="CheckSumCRC.cpp">
+        <itemTool>1</itemTool>
+      </item>
+      <item path="CheckSumCRC.h">
+        <itemTool>3</itemTool>
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

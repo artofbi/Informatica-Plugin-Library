@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://www.informatica.com/wsh" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://www.informatica.com/wsh" xmlns:intf="http://www.informatica.com/wsh" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                  
+    <wsdl:types>
+        <schema targetNamespace="http://www.informatica.com/wsh" xmlns="http://www.w3.org/2001/XMLSchema">
+            <!-- Start authentication related types. -->
+            <complexType name="VoidRequest"/>
+            <complexType name="VoidResponse"/>
+            <complexType name="SessionHeader">
+                <sequence>
+                    <element name="SessionId" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <element name="Context" type="impl:SessionHeader"/>
+            <complexType name="FaultDetails">
+                <sequence>
+                    <element name="ErrorCode" type="xsd:string"/>
+                    <element name="ExtendedDetails" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <element name="WSHFaultDetails" type="impl:FaultDetails"/>
+            <complexType name="LoginRequest">
+                <sequence>
+                    <element name="RepositoryDomainName" nillable="true" type="xsd:string"/>
+                    <element name="RepositoryName" type="xsd:string"/>
+                    <element name="UserName" type="xsd:string"/>
+                    <element name="Password" type="xsd:string"/>
+                    <element name="UserNameSpace" nillable="true" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <element name="Login" type="impl:LoginRequest"/>
+            <element name="LoginReturn" type="xsd:string"/>
+            <element name="Logout" type="impl:VoidRequest"/>
+            <element name="LogoutReturn" type="impl:VoidResponse"/>
+            <!-- End authentication related types. -->
+
+            <complexType name="FolderInfo">
+                <sequence>
+                    <element name="Name" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="FolderInfoArray">
+                <sequence>
+                    <element name="FolderInfo" minOccurs="0" maxOccurs="unbounded" type="impl:FolderInfo"/>
+                </sequence>
+            </complexType>
+            <element name="GetAllFolders" nillable="true" type="impl:VoidRequest"/>            
+            <element name="GetAllFoldersReturn" type="impl:FolderInfoArray"/>
+            <complexType name="WorkflowInfo">
+                <sequence>
+                    <element name="Name" type="xsd:string"/>
+                    <element name="IsValid" type="xsd:boolean"/>
+                    <element name="FolderName" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="WorkflowInfoArray">
+                <sequence>
+                    <element name="WorkflowInfo" minOccurs="0" maxOccurs="unbounded" type="impl:WorkflowInfo"/>
+                </sequence>
+            </complexType>
+            <element name="GetAllWorkflows" type="impl:FolderInfo"/>
+            <element name="GetAllWorkflowsReturn" type="impl:WorkflowInfoArray"/>
+            <!--  elements for GetAllTaskInstances operation messages  -->
+            <complexType name="GetAllTaskInstancesRequest">
+                <sequence>
+                    <element name="WorkflowInfo" type="impl:WorkflowInfo"/>
+                    <element name="Depth" type="xsd:int"/>
+                </sequence>
+            </complexType>
+            <element name="GetAllTaskInstances" type="impl:GetAllTaskInstancesRequest"/>
+            <complexType name="TaskInstanceInfo">
+                <sequence>
+                    <element name="Name" type="xsd:string"/>
+                    <element name="Type" type="xsd:string"/>
+                    <element name="ChildTask" minOccurs="0" maxOccurs="unbounded" type="impl:TaskInstanceInfo"/>
+                    <element name="IsValid" type="xsd:boolean"/>
+                </sequence>
+            </complexType>
+            <complexType name="TaskInstanceInfoArray">
+                <sequence>
+                    <element name="TaskInstanceInfo" minOccurs="0" maxOccurs="unbounded" type="impl:TaskInstanceInfo"/>
+                </sequence>
+            </complexType>
+            <element name="GetAllTaskInstancesReturn" type="impl:TaskInstanceInfoArray"/>
+                <!--  elements for GetAllDIServers operation messages  -->
+                <element name="GetAllDIServers" nillable="true" type="impl:VoidRequest"/>
+                <complexType name="DIServerInfo">
+                    <sequence>
+                        <element name="Name" type="xsd:string"/>
+                    </sequence>
+                </complexType>
+                <complexType name="DIServerInfoArray">
+                    <sequence>
+                        <element name="DIServerInfo" minOccurs="0" maxOccurs="unbounded" type="impl:DIServerInfo"/>
+                    </sequence>
+                </complexType>
+            <element name="GetAllDIServersReturn" type="impl:DIServerInfoArray"/>
+            <!--  elements for GetAllRepositories operation messages  -->
+            <element name="GetAllRepositories" nillable="true" type="impl:VoidRequest"/>
+            <complexType name="RepositoryInfo">
+                <sequence>
+                    <element name="Name" type="xsd:string"/>
+                </sequence>
+            </complexType>
+            <complexType name="RepositoryInfoArray">
+                <sequence>
+                    <element name="RepositoryInfo" minOccurs="0" maxOccurs="unbounded" type="impl:RepositoryInfo"/>
+                </sequence>
+            </complexType>
+            <element name="GetAllRepositoriesReturn" type="impl:RepositoryInfoArray"/>
+        </schema>
+    </wsdl:types>  
+
+    <!-- Start authentication related messages. -->
+    <wsdl:message name="ContextHeader">
+        <wsdl:part name="Context" element="impl:Context"/>
+    </wsdl:message>
+    <wsdl:message name="Fault">
+        <wsdl:part name="WSHFaultDetails" element="impl:WSHFaultDetails"/>
+    </wsdl:message>
+    <wsdl:message name="LoginRequest">
+        <wsdl:part name="param" element="impl:Login"/>
+    </wsdl:message>
+    <wsdl:message name="LoginResponse">
+        <wsdl:part name="param" element="impl:LoginReturn"/>
+    </wsdl:message>
+    <wsdl:message name="LogoutRequest">
+        <wsdl:part name="param" element="impl:Logout"/>
+    </wsdl:message>
+    <wsdl:message name="LogoutResponse">
+        <wsdl:part name="param" element="impl:LogoutReturn"/>
+    </wsdl:message>
+    <!-- End authentication related messages. -->
+
+    <wsdl:message name="GetAllFoldersRequest">
+        <wsdl:part name="param" element="impl:GetAllFolders"/>
+    </wsdl:message>
+    <wsdl:message name="GetAllFoldersResponse">
+        <wsdl:part name="param" element="impl:GetAllFoldersReturn"/>
+    </wsdl:message>
+    <wsdl:message name="GetAllWorkflowsRequest">
+        <wsdl:part name="param" element="impl:GetAllWorkflows"/>
+    </wsdl:message>
+    <wsdl:message name="GetAllWorkflowsResponse">
+        <wsdl:part name="param" element="impl:GetAllWorkflowsReturn"/>
+    </wsdl:message>
+    <wsdl:message name="GetAllTaskInstancesRequest">
+        <wsdl:part name="param" element="impl:GetAllTaskInstances"/>
+    </wsdl:message>
+    <wsdl:message name="GetAllTaskInstancesResponse">
+        <wsdl:part name="param" element="impl:GetAllTaskInstancesReturn"/>
+    </wsdl:message>
+    <wsdl:message name="GetAllDIServersRequest">
+        <wsdl:part name="param" element="impl:GetAllDIServers"/>
+    </wsdl:message>
+    <wsdl:message name="GetAllDIServersResponse">
+        <wsdl:part name="param" element="impl:GetAllDIServersReturn"/>
+    </wsdl:message>
+    <wsdl:message name="GetAllRepositoriesRequest">
+        <wsdl:part name="param" element="impl:GetAllRepositories"/>
+    </wsdl:message>
+    <wsdl:message name="GetAllRepositoriesResponse">
+        <wsdl:part name="param" element="impl:GetAllRepositoriesReturn"/>
+    </wsdl:message>
+
+    <wsdl:portType name="MetadataInterface">
+        <!-- Start authentication related operations. -->
+        <wsdl:operation name="login">
+            <wsdl:input name="LoginRequest" message="impl:LoginRequest"/>
+            <wsdl:output name="LoginResponse" message="impl:LoginResponse"/>
+            <wsdl:fault name="Fault" message="impl:Fault"/>
+        </wsdl:operation>
+        <wsdl:operation name="logout">
+            <wsdl:input name="LogoutRequest" message="impl:LogoutRequest"/>
+            <wsdl:output name="LogoutResponse" message="impl:LogoutResponse"/>
+            <wsdl:fault name="Fault" message="impl:Fault"/>
+        </wsdl:operation>
+        <!-- Start authentication related operations. -->
+
+        <wsdl:operation name="getAllFolders">
+            <wsdl:input name="GetAllFoldersRequest" message="impl:GetAllFoldersRequest"/>
+            <wsdl:output name="GetAllFoldersResponse" message="impl:GetAllFoldersResponse"/>
+            <wsdl:fault name="Fault" message="impl:Fault"/>
+        </wsdl:operation>
+        <wsdl:operation name="getAllWorkflows">
+            <wsdl:input name="GetAllWorkflowsRequest" message="impl:GetAllWorkflowsRequest"/>
+            <wsdl:output name="GetAllWorkflowsResponse" message="impl:GetAllWorkflowsResponse"/>
+            <wsdl:fault name="Fault" message="impl:Fault"/>
+        </wsdl:operation>
+        <wsdl:operation name="getAllTaskInstances">
+            <wsdl:input name="GetAllTaskInstancesRequest" message="impl:GetAllTaskInstancesRequest"/>
+            <wsdl:output name="GetAllTaskInstancesResponse" message="impl:GetAllTaskInstancesResponse"/>
+            <wsdl:fault name="Fault" message="impl:Fault"/>
+        </wsdl:operation>
+        <wsdl:operation name="getAllDIServers">
+            <wsdl:input name="GetAllDIServersRequest" message="impl:GetAllDIServersRequest"/>
+            <wsdl:output name="GetAllDIServersResponse" message="impl:GetAllDIServersResponse"/>
+            <wsdl:fault name="Fault" message="impl:Fault"/>
+        </wsdl:operation>
+        <wsdl:operation name="getAllRepositories">
+            <wsdl:input name="GetAllRepositoriesRequest" message="impl:GetAllRepositoriesRequest"/>
+            <wsdl:output name="GetAllRepositoriesResponse" message="impl:GetAllRepositoriesResponse"/>
+            <wsdl:fault name="Fault" message="impl:Fault"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    
+    <wsdl:binding name="MetadataServiceSoapBinding" type="impl:MetadataInterface">
+        <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <!-- Start authentication related operations. -->
+        <wsdl:operation name="login">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="LoginRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="LoginResponse">
+                <wsdlsoap:header message="impl:ContextHeader" part="Context" use="literal"/>
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="Fault">
+                <wsdlsoap:fault name="Fault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="logout">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="LogoutRequest">
+                <wsdlsoap:header message="impl:ContextHeader" part="Context" use="literal"/>
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="LogoutResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="Fault">
+                <wsdlsoap:fault name="Fault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <!-- End authentication related operations. -->
+
+        <wsdl:operation name="getAllFolders">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="GetAllFoldersRequest">
+                <wsdlsoap:header message="impl:ContextHeader" part="Context" use="literal"/>
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="GetAllFoldersResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="Fault">
+                <wsdlsoap:fault name="Fault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getAllWorkflows">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="GetAllWorkflowsRequest">
+                <wsdlsoap:header message="impl:ContextHeader" part="Context" use="literal"/>
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="GetAllWorkflowsResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="Fault">
+                <wsdlsoap:fault name="Fault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getAllTaskInstances">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="GetAllTaskInstancesRequest">
+                <wsdlsoap:header message="impl:ContextHeader" part="Context" use="literal"/>
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="GetAllTaskInstancesResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="Fault">
+                <wsdlsoap:fault name="Fault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getAllDIServers">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="GetAllDIServersRequest">
+                <wsdlsoap:header message="impl:ContextHeader" part="Context" use="literal"/>
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="GetAllDIServersResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="Fault">
+                <wsdlsoap:fault name="Fault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getAllRepositories">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="GetAllRepositoriesRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="GetAllRepositoriesResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="Fault">
+                <wsdlsoap:fault name="Fault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+	<wsdl:service name="MetadataService">
+		<wsdl:port name="Metadata" binding="impl:MetadataServiceSoapBinding">
+			<wsdlsoap:address location="http://localhost:7333/wsh/services/BatchServices/Metadata"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,20 @@
+# The environment variable PM_HOME should be set to point to the PowerCenter/PowerMart server install directory
+
+CC=aCC
+FLAGS=-w -Dvolatile="" -lpthread +DAportable -z +z -D_THREAD_SAFE -DUNIX 
+DEFINES=-DHPUX -D_REENTRANT 
+INCLUDEDIRS=-I../include
+.SUFFIXES : .cpp
+.cpp.o : ;$(CC) -c $(FLAGS) $(DEFINES) $(INCLUDEDIRS) $*.cpp -o $*.o
+
+TARGET=libpmecho.sl
+
+OBJS=$(SRCS:%.cpp=%.o)
+
+SRCS= \
+SampleExprPlugin.cpp
+
+all : $(TARGET)
+
+$(TARGET) : $(OBJS)
+	$(CC) -b -Wl,+s $(OBJS) -o $(TARGET)

@@ -1,0 +1,10 @@
+C:\_Dev\Informatica_BGInfo\InfaBGInfo\bin\Debug\InfaBGInfo.exe
+C:\_Dev\Informatica_BGInfo\InfaBGInfo\bin\Debug\InfaBGInfo.pdb
+C:\_Dev\Informatica_BGInfo\InfaBGInfo\obj\Debug\ResolveAssemblyReference.cache
+C:\_Dev\Informatica_BGInfo\InfaBGInfo\obj\Debug\InfaBGInfo.Form1.resources
+C:\_Dev\Informatica_BGInfo\InfaBGInfo\obj\Debug\InfaBGInfo.Properties.Resources.resources
+C:\_Dev\Informatica_BGInfo\InfaBGInfo\obj\Debug\InfaBGInfo.csproj.GenerateResource.Cache
+C:\_Dev\Informatica_BGInfo\InfaBGInfo\obj\Debug\InfaBGInfo.exe
+C:\_Dev\Informatica_BGInfo\InfaBGInfo\obj\Debug\InfaBGInfo.pdb
+C:\_Dev\Informatica_BGInfo\InfaBGInfo\bin\Debug\InfaBGInfo.exe.config
+C:\_Dev\Informatica_BGInfo\InfaBGInfo\obj\Debug\InfaBGInfo.Resources.AboutBox1.resources

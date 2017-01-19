@@ -1,0 +1,20 @@
+
+CC=xlC_r
+NOSTART=-bnoentry
+FLAGS=-+ 
+DEFINES=-DUNIX -DAIX -D_REENTRANT 
+INCLUDEDIRS=-I../include
+.SUFFIXES : .cpp
+.cpp.o : ;$(CC) -c $(FLAGS) $(DEFINES) $(INCLUDEDIRS) $*.cpp -o $*.o
+
+TARGET=libpmecho.a
+
+OBJS=$(SRCS:%.cpp=%.o)
+
+SRCS= \
+SampleExprPlugin.cpp
+
+all : $(TARGET)
+
+$(TARGET) : $(OBJS)
+	$(CC) -G $(FLAGS) $(DEFINES) $(INCLUDEDIRS) -o $(TARGET) $(OBJS)

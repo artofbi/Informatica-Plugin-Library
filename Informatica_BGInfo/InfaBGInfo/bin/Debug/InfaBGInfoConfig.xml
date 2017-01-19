@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<InfaBGInfo>
+  <Settings>
+    <WSHServerName>localhost</WSHServerName>
+    <WSHServerPort>7333</WSHServerPort>
+    <WSHUsesSSL>False</WSHUsesSSL>
+    <DomainName>Domain_DemoMachine_XE</DomainName>
+    <RepositoryName>cloud_rep</RepositoryName>
+    <RepositoryUsername>Administrator</RepositoryUsername>
+    <RepositoryPassword>Administrator</RepositoryPassword>
+  </Settings>
+  <Output>
+    <BkgCustomOption>1</BkgCustomOption>
+    <BkgColor>-1</BkgColor>
+    <BkgPosition>0</BkgPosition>
+    <LayerOnImage>C:\FyghtSoft_InfaBGInfo_v1\Demo\Wallpaper\VSNET_Wave.bmp</LayerOnImage>
+    <ForegroundColor>-16777216</ForegroundColor>
+    <FontSize>20</FontSize>
+    <ScreenRegion>0</ScreenRegion>
+  </Output>
+  <Advanced>
+    <ShowAvailableWSHRepositories>True</ShowAvailableWSHRepositories>
+    <ShowAllRepositoryFolders>True</ShowAllRepositoryFolders>
+    <ShowGlobalRepositoryWorkflows>True</ShowGlobalRepositoryWorkflows>
+    <ShowAssociatedIntegrationServices>True</ShowAssociatedIntegrationServices>
+    <ShowSystemInformationBlock>True</ShowSystemInformationBlock>
+    <TimerEnabled>True</TimerEnabled>
+    <TimerIntervalSeconds>18</TimerIntervalSeconds>
+  </Advanced>
+</InfaBGInfo>
